@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
 import { BounceLoader } from 'react-spinners';
+import dotenv from 'dotenv';
 
-const API_KEY = "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";
+dotenv.config();
+
+const API_KEY = process.env.API_KEY; 
 const SPOTIFY_CLIENT_ID = '4da133b557414e81bbf9d9d0a2721232';
 const SPOTIFY_REDIRECT_URI = 'http://localhost:3000/';
 const SPOTIFY_SCOPES = ['playlist-modify-private', 'playlist-read-private', 'user-read-private', 'playlist-modify-public', 'ugc-image-upload'];
